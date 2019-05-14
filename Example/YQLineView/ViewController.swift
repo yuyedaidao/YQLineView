@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import YQLineView
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var lineView: YQLineView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        lineView.positions = [.left, .bottom, .right, .top] 
     }
 
     override func didReceiveMemoryWarning() {
