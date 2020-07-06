@@ -28,7 +28,7 @@ let SINGLE_LINE_ADJUST_OFFSET = SINGLE_LINE_WIDTH / 2
 
 @IBDesignable open class YQLineView: UIView {
 
-    @IBInspectable public var color: UIColor? = UIColor.gray {
+    @IBInspectable public var color: UIColor? = UIColor.lightGray {
         didSet {
             setNeedsDisplay()
         }
@@ -67,19 +67,15 @@ let SINGLE_LINE_ADJUST_OFFSET = SINGLE_LINE_WIDTH / 2
             guard positions.contains(position) else {continue}
             switch position {
             case .top:
-                print("top")
                 context.move(to: CGPoint(x: 0, y: SINGLE_LINE_ADJUST_OFFSET))
                 context.addLine(to: CGPoint(x: bounds.width, y: SINGLE_LINE_ADJUST_OFFSET))
             case .right:
-                print("right")
                 context.move(to: CGPoint(x: bounds.width - SINGLE_LINE_ADJUST_OFFSET, y: 0))
                 context.addLine(to: CGPoint(x: bounds.width - SINGLE_LINE_ADJUST_OFFSET, y: bounds.height))
             case .bottom:
-                print("bottom")
                 context.move(to: CGPoint(x: 0, y: bounds.height -  SINGLE_LINE_ADJUST_OFFSET))
                 context.addLine(to: CGPoint(x: bounds.width, y: bounds.height - SINGLE_LINE_ADJUST_OFFSET))
             case .left:
-                print("left")
                 context.move(to: CGPoint(x: SINGLE_LINE_ADJUST_OFFSET, y: 0))
                 context.addLine(to: CGPoint(x: SINGLE_LINE_ADJUST_OFFSET, y: bounds.height))
             default:

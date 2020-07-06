@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YQLineView'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'YQLineView.'
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = '畅媒未来版公共模块-YQLineView'
+  s.description      = 'Swift版边线视图-YQLineView'
 
   s.homepage         = 'https://github.com/yuyedaidao/YQLineView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
   s.source_files = 'YQLineView/Classes/**/*'
   
 #  s.resource_bundles = {
