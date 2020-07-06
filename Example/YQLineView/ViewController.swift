@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        lineView.positions = [.left, .bottom, .right, .top] 
+        lineView.positions = [.left, .bottom, .right, .top]
+        lineView.edgeInsets = UIEdgeInsets(top: 10, left: 6, bottom: 8, right: 15)
     }
 
     override func didReceiveMemoryWarning() {

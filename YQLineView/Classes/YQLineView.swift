@@ -26,7 +26,7 @@ let SINGLE_LINE_WIDTH = 1 / UIScreen.main.scale
 let SINGLE_LINE_ADJUST_OFFSET = SINGLE_LINE_WIDTH / 2
 
 
-@IBDesignable open class YQLineView: UIView {
+@IBDesignable open class YQLineView: UIControl {
 
     @IBInspectable public var color: UIColor? = UIColor.lightGray {
         didSet {
@@ -39,6 +39,8 @@ let SINGLE_LINE_ADJUST_OFFSET = SINGLE_LINE_WIDTH / 2
         }
     }
     
+    /// 边线的偏移量
+    public var edgeInsets = UIEdgeInsets.zero
     
     public init() {
         super.init(frame: CGRect.zero)
@@ -67,17 +69,17 @@ let SINGLE_LINE_ADJUST_OFFSET = SINGLE_LINE_WIDTH / 2
             guard positions.contains(position) else {continue}
             switch position {
             case .top:
-                context.move(to: CGPoint(x: 0, y: SINGLE_LINE_ADJUST_OFFSET))
-                context.addLine(to: CGPoint(x: bounds.width, y: SINGLE_LINE_ADJUST_OFFSET))
+                context.move(to: CGPoint(x: edgeInsets.left, y: SINGLE_LINE_ADJUST_OFFSET + edgeInsets.top))
+                context.addLine(to: CGPoint(x: bounds.width - edgeInsets.right, y: SINGLE_LINE_ADJUST_OFFSET + edgeInsets.top))
             case .right:
-                context.move(to: CGPoint(x: bounds.width - SINGLE_LINE_ADJUST_OFFSET, y: 0))
-                context.addLine(to: CGPoint(x: bounds.width - SINGLE_LINE_ADJUST_OFFSET, y: bounds.height))
+                context.move(to: CGPoint(x: bounds.width - edgeInsets.right - SINGLE_LINE_ADJUST_OFFSET, y: edgeInsets.top))
+                context.addLine(to: CGPoint(x: bounds.width - edgeInsets.right - SINGLE_LINE_ADJUST_OFFSET, y: bounds.height - edgeInsets.bottom))
             case .bottom:
-                context.move(to: CGPoint(x: 0, y: bounds.height -  SINGLE_LINE_ADJUST_OFFSET))
-                context.addLine(to: CGPoint(x: bounds.width, y: bounds.height - SINGLE_LINE_ADJUST_OFFSET))
+                context.move(to: CGPoint(x: edgeInsets.left, y: bounds.height - edgeInsets.bottom - SINGLE_LINE_ADJUST_OFFSET))
+                context.addLine(to: CGPoint(x: bounds.width - edgeInsets.right, y: bounds.height - edgeInsets.bottom - SINGLE_LINE_ADJUST_OFFSET))
             case .left:
-                context.move(to: CGPoint(x: SINGLE_LINE_ADJUST_OFFSET, y: 0))
-                context.addLine(to: CGPoint(x: SINGLE_LINE_ADJUST_OFFSET, y: bounds.height))
+                context.move(to: CGPoint(x: edgeInsets.left + SINGLE_LINE_ADJUST_OFFSET, y: edgeInsets.top))
+                context.addLine(to: CGPoint(x: edgeInsets.left + SINGLE_LINE_ADJUST_OFFSET, y: bounds.height - edgeInsets.bottom))
             default:
                 break
             }
