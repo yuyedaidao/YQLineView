@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         lineView.positions = [.left, .bottom, .right, .top]
         lineView.edgeInsets = UIEdgeInsets(top: 10, left: 6, bottom: 8, right: 15)
+        lineView.setLineMargin(YQLineMargin(head: 10, tail: 6), at: [.left, .bottom])
+        lineView.setLineMargin(YQLineMargin(head: 7, tail: 16), at: [.right, .top])
     }
 
     override func didReceiveMemoryWarning() {

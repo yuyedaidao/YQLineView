@@ -1,5 +1,5 @@
 PODS:
-  - YQLineView (0.1.1)
+  - YQLineView (0.1.3)
 
 DEPENDENCIES:
   - YQLineView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  YQLineView: 8d96ae9116a840a96f9aa4a85c0fc761ce00fb67
+  YQLineView: ab58b6de0b82953118893121a1f2fe08b3b1adb7
 
 PODFILE CHECKSUM: a68b88ce3af980b4b63e7471f6c401bda750f377
 
