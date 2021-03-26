@@ -47,7 +47,7 @@ let SINGLE_LINE_WIDTH = 1 / UIScreen.main.scale
 let SINGLE_LINE_ADJUST_OFFSET = SINGLE_LINE_WIDTH / 2
 
 
-@IBDesignable open class YQLineView: UIControl {
+open class YQLineView: UIControl {
 
     @IBInspectable public var color: UIColor? = UIColor.lightGray {
         didSet {

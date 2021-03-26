@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		227967721D434FCEF4C7EEB8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		3D968568108C0D56CB29F681 /* YQLineView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YQLineView.podspec; path = ../YQLineView.podspec; sourceTree = "<group>"; };
+		3D968568108C0D56CB29F681 /* YQLineView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YQLineView.podspec; path = ../YQLineView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		586704E2AAC7ABF6909C7B4F /* Pods_YQLineView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YQLineView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* YQLineView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQLineView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
