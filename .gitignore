@@ -42,6 +42,7 @@ playground.xcworkspace
 # Package.pins
 # Package.resolved
 .build/
+.swiftpm/
 
 # CocoaPods
 #
@@ -50,6 +51,7 @@ playground.xcworkspace
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 Pods/
+_Pods.xcodeproj
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace
@@ -79,4 +81,3 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-

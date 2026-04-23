@@ -13,8 +13,27 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-YQLineView is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Swift Package Manager
+
+Add YQLineView to your project in Xcode:
+
+1. Select `File > Add Package Dependencies...`
+2. Enter `https://github.com/yuyedaidao/YQLineView.git`
+3. Select the `master` branch and add the `YQLineView` product.
+
+Or add the current repository branch to your `Package.swift` dependencies:
+
+```swift
+.package(url: "https://github.com/yuyedaidao/YQLineView.git", branch: "master")
+```
+
+Then add `YQLineView` to your target dependencies. After publishing a new tag
+that includes `Package.swift`, prefer a version-based dependency.
+
+### CocoaPods
+
+YQLineView is also available through [CocoaPods](https://cocoapods.org). To install
+it, add the following line to your Podfile:
 
 ```ruby
 pod 'YQLineView'
